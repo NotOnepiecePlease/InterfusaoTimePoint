@@ -1,8 +1,10 @@
-﻿using System;
+﻿using InterfusaoTimePoint.Dados;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -13,60 +15,76 @@ namespace InterfusaoTimePoint.Forms
 {
     public partial class frm_Principal : Form
     {
+        BuscarDados bd = new BuscarDados();
         public frm_Principal()
         {
             InitializeComponent();
             //PopularGridFake();
-            PopularGrid();
+            VerificarExistenciaPasta();
+            bd.PopularGrid(dataArquivosDasHoras);
+        }
+
+        private void VerificarExistenciaPasta()
+        {
+            string caminhoPasta = @"Horas";
+            if (!Directory.Exists(caminhoPasta))
+            {
+                Directory.CreateDirectory(caminhoPasta);
+            }
         }
 
         private void PopularGridFake()
         {
 
-            for (int i = 0; i <15; i++)
+            for (int i = 0; i < 15; i++)
             {
-                DataGridViewRow row = (DataGridViewRow)gridArquivosHoras.Rows[i].Clone();
+                DataGridViewRow row = (DataGridViewRow)dataArquivosDasHoras.Rows[i].Clone();
                 row.Cells[0].Value = $"Arquivo_Texto{i}.txt";
-                row.Cells[1].Value = (i <10) ? $"0{i}/02/2022" : $"{i}/02/2022";
+                row.Cells[1].Value = (i < 10) ? $"0{i}/02/2022" : $"{i}/02/2022";
                 row.Cells[2].Value = "06/02/2022";
-                gridArquivosHoras.Rows.Add(row);
+                dataArquivosDasHoras.Rows.Add(row);
             }
         }
 
-        struct colunasDaLista
-        {
-            public string nome;
-            public string data_criacao;
-            public string data_modificacao;
+        
+        
 
-            public colunasDaLista(string _nome, string _data, string _dataModificacao) : this()
-            {
-                nome = _nome;
-                data_criacao = _data;
-                data_modificacao = _dataModificacao;
-            }
+        private void btnSemanaAtual_Click(object sender, EventArgs e)
+        {
+            frm_InserirHora formInserirHora = new frm_InserirHora();
+            formInserirHora.ShowDialog();
+            bd.PopularGrid(dataArquivosDasHoras);
         }
-        private void PopularGrid()
-        {
-            List<colunasDaLista> listaDeArquivos = new List<colunasDaLista>();
-            //List<KeyValuePair<string, string>> listaDeArquivos = new List<KeyValuePair<string, string>>();
-            //Dictionary<string, string> listaDeArquivos = new Dictionary<string, string>();
-            // _items.Add(new KeyValuePair<string, string>(foo, bar));
-            DirectoryInfo dinfo = new DirectoryInfo(@"Horas");
-            FileInfo[] Files = dinfo.GetFiles("*.txt");
-            foreach (FileInfo file in Files)
-            {
-                listaDeArquivos.Add(new colunasDaLista(file.Name, file.CreationTime.ToString(), file.LastWriteTime.ToString()));
-            }
 
-            for (int i = 0; i < listaDeArquivos.Count; i++)
-            {
-                DataGridViewRow row = (DataGridViewRow)gridArquivosHoras.Rows[i].Clone();
-                row.Cells[0].Value = $"{listaDeArquivos[i].nome}";
-                row.Cells[1].Value = $"{listaDeArquivos[i].data_criacao}";
-                row.Cells[2].Value = $"{listaDeArquivos[i].data_modificacao}";
-                gridArquivosHoras.Rows.Add(row);
-            }
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            //gridArquivosHoras.DataSource = null;
+            Application.Exit();
+        }
+
+        private void dataArquivosDasHoras_DoubleClick(object sender, EventArgs e)
+        {
+            frm_InserirHora formInserir = new frm_InserirHora(dataArquivosDasHoras.CurrentRow.Cells[0].Value.ToString());
+            formInserir.ShowDialog();
+            bd.PopularGrid(dataArquivosDasHoras);
+        }
+
+        private void calendarCalendario_SelectionChanged(Syncfusion.WinForms.Input.SfCalendar sender, Syncfusion.WinForms.Input.Events.SelectionChangedEventArgs e)
+        {
+            //MessageBox.Show(calendarCalendario.SelectedDate.ToString());
+            bd.PopularGridPorDatas(calendarCalendario.SelectedDate.Value, dataArquivosDasHoras);
+        }
+
+        private void btnTodos_Click(object sender, EventArgs e)
+        {
+            bd.PopularGrid(dataArquivosDasHoras);
+        }
+
+        private void btnHoje_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show(GetIso8601WeekOfYear(new DateTime(2022, 01, 13)).ToString());
+            calendarCalendario.SelectedDate = DateTime.Now;
+            calendarCalendario.Refresh();
         }
     }
 }
