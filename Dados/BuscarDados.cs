@@ -1,4 +1,5 @@
 ﻿using Bunifu.UI.WinForms;
+using Syncfusion.WinForms.ListView;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace InterfusaoTimePoint.Dados
 {
     class BuscarDados
     {
+        #region Struct
         struct colunasDaLista
         {
             public string nome;
@@ -27,7 +29,9 @@ namespace InterfusaoTimePoint.Dados
                 data_modificacao = _dataModificacao;
             }
         }
+        #endregion
 
+        #region Pegar numero da semana
         public static int PegarNumeroDaSemana(DateTime time)
         {
             // Seriously cheat.  If its Monday, Tuesday or Wednesday, then it'll 
@@ -42,7 +46,9 @@ namespace InterfusaoTimePoint.Dados
             // Return the week of our adjusted day
             return CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(time, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
         }
+        #endregion  
 
+        #region popular o grid com todos arquivos
         public void PopularGrid(BunifuDataGridView _dataArquivosDasHoras)
         {
             try
@@ -76,7 +82,9 @@ namespace InterfusaoTimePoint.Dados
                 MessageBox.Show(ex.ToString());
             }
         }
+        #endregion
 
+        #region popular grid por datas
         public void PopularGridPorDatas(DateTime _data, BunifuDataGridView _dataArquivosDasHoras)
         {
             try
@@ -114,5 +122,38 @@ namespace InterfusaoTimePoint.Dados
                 MessageBox.Show(ex.ToString());
             }
         }
+        #endregion
+
+        #region Buscar arquivo especifico
+        public void PreencherCaixaDeTexto(RichTextBox _caixaDeTexto, string _nomeDoArquivo)
+        {
+            string[] linhasDoTexto = File.ReadAllLines(@"Horas\" + _nomeDoArquivo + "");
+
+            foreach (string linha in linhasDoTexto)
+            {
+                _caixaDeTexto.Text += linha + "\n";
+            }
+        }
+
+        #endregion
+
+        #region Buscar descricao da atividade
+        public void BuscarDescricaAtividade(SfComboBox _combobox, string _nomeDoArquivo)
+        {
+            List<string> descricoesAtividades = new List<string>();
+            string[] linhasTexto = File.ReadAllLines(@"Horas\" + _nomeDoArquivo + "");
+            string[] textoSeparadoPorTabs = linhasTexto[0].Split('\t', '\n');
+
+
+            for (int i = 0; i < linhasTexto.Length; i++)
+            {
+                textoSeparadoPorTabs = linhasTexto[i].Split('\t', '\n');
+                descricoesAtividades.Add(textoSeparadoPorTabs[2]);
+                // _combobox.
+            }
+
+            _combobox.DataSource = descricoesAtividades;
+        }
+        #endregion
     }
 }

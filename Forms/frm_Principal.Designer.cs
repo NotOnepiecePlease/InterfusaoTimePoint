@@ -52,7 +52,7 @@ namespace InterfusaoTimePoint.Forms
             this.btnHoje = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnTodos = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panelHeader = new System.Windows.Forms.Panel();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnSair = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.calendarCalendario = new Syncfusion.WinForms.Input.SfCalendar();
@@ -359,7 +359,7 @@ namespace InterfusaoTimePoint.Forms
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(12)))), ((int)(((byte)(9)))));
-            this.panelHeader.Controls.Add(this.bunifuButton1);
+            this.panelHeader.Controls.Add(this.btnSair);
             this.panelHeader.Controls.Add(this.bunifuSeparator2);
             this.panelHeader.Controls.Add(this.picLogo);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -368,45 +368,45 @@ namespace InterfusaoTimePoint.Forms
             this.panelHeader.Size = new System.Drawing.Size(1280, 65);
             this.panelHeader.TabIndex = 2;
             // 
-            // bunifuButton1
+            // btnSair
             // 
-            this.bunifuButton1.AllowToggling = false;
-            this.bunifuButton1.AnimationSpeed = 200;
-            this.bunifuButton1.AutoGenerateColors = false;
-            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(12)))), ((int)(((byte)(9)))));
-            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
-            this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.ButtonText = "";
-            this.bunifuButton1.ButtonTextMarginLeft = 0;
-            this.bunifuButton1.ColorContrastOnClick = 45;
-            this.bunifuButton1.ColorContrastOnHover = 45;
-            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSair.AllowToggling = false;
+            this.btnSair.AnimationSpeed = 200;
+            this.btnSair.AutoGenerateColors = false;
+            this.btnSair.BackColor = System.Drawing.Color.Transparent;
+            this.btnSair.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(12)))), ((int)(((byte)(9)))));
+            this.btnSair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSair.BackgroundImage")));
+            this.btnSair.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSair.ButtonText = "";
+            this.btnSair.ButtonTextMarginLeft = 0;
+            this.btnSair.ColorContrastOnClick = 45;
+            this.btnSair.ColorContrastOnHover = 45;
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges4.BottomLeft = true;
             borderEdges4.BottomRight = true;
             borderEdges4.TopLeft = true;
             borderEdges4.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges4;
-            this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton1.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.bunifuButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton1.IconMarginLeft = 11;
-            this.bunifuButton1.IconPadding = 10;
-            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(12)))), ((int)(((byte)(9)))));
-            this.bunifuButton1.IdleBorderRadius = 3;
-            this.bunifuButton1.IdleBorderThickness = 1;
-            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(12)))), ((int)(((byte)(9)))));
-            this.bunifuButton1.IdleIconLeftImage = global::InterfusaoTimePoint.Properties.Resources.close_64px;
-            this.bunifuButton1.IdleIconRightImage = null;
-            this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(1235, 0);
-            this.bunifuButton1.Name = "bunifuButton1";
+            this.btnSair.CustomizableEdges = borderEdges4;
+            this.btnSair.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSair.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btnSair.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnSair.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnSair.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnSair.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.btnSair.ForeColor = System.Drawing.Color.White;
+            this.btnSair.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSair.IconMarginLeft = 11;
+            this.btnSair.IconPadding = 10;
+            this.btnSair.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSair.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(12)))), ((int)(((byte)(9)))));
+            this.btnSair.IdleBorderRadius = 3;
+            this.btnSair.IdleBorderThickness = 1;
+            this.btnSair.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(12)))), ((int)(((byte)(9)))));
+            this.btnSair.IdleIconLeftImage = global::InterfusaoTimePoint.Properties.Resources.close_64px;
+            this.btnSair.IdleIconRightImage = null;
+            this.btnSair.IndicateFocus = false;
+            this.btnSair.Location = new System.Drawing.Point(1235, 0);
+            this.btnSair.Name = "btnSair";
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(42)))));
             stateProperties7.BorderRadius = 3;
             stateProperties7.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -415,7 +415,7 @@ namespace InterfusaoTimePoint.Forms
             stateProperties7.ForeColor = System.Drawing.Color.White;
             stateProperties7.IconLeftImage = null;
             stateProperties7.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties7;
+            this.btnSair.onHoverState = stateProperties7;
             stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
             stateProperties8.BorderRadius = 3;
             stateProperties8.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -424,13 +424,13 @@ namespace InterfusaoTimePoint.Forms
             stateProperties8.ForeColor = System.Drawing.Color.White;
             stateProperties8.IconLeftImage = null;
             stateProperties8.IconRightImage = null;
-            this.bunifuButton1.OnPressedState = stateProperties8;
-            this.bunifuButton1.Size = new System.Drawing.Size(45, 45);
-            this.bunifuButton1.TabIndex = 9;
-            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton1.TextMarginLeft = 0;
-            this.bunifuButton1.UseDefaultRadiusAndThickness = true;
-            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
+            this.btnSair.OnPressedState = stateProperties8;
+            this.btnSair.Size = new System.Drawing.Size(45, 45);
+            this.btnSair.TabIndex = 9;
+            this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSair.TextMarginLeft = 0;
+            this.btnSair.UseDefaultRadiusAndThickness = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // bunifuSeparator2
             // 
@@ -720,7 +720,7 @@ namespace InterfusaoTimePoint.Forms
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
         private Bunifu.UI.WinForms.BunifuFormDock formdockPicLogo;
         private Bunifu.UI.WinForms.BunifuFormDock formdockPanelHeader;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSair;
         private Bunifu.UI.WinForms.BunifuDataGridView dataArquivosDasHoras;
     }
 }

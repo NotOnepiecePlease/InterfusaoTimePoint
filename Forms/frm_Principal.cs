@@ -56,7 +56,7 @@ namespace InterfusaoTimePoint.Forms
             bd.PopularGrid(dataArquivosDasHoras);
         }
 
-        private void bunifuButton1_Click(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
             //gridArquivosHoras.DataSource = null;
             Application.Exit();

@@ -8,13 +8,7 @@ E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Bunifu.UI.WinForms
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.xml
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Bunifu_UI_v1.5.3.xml
-E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.Compression.Base.xml
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.Core.WinForms.xml
-E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.DocIO.Base.xml
-E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.DocIO.ClientProfile.xml
-E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.Maps.Windows.xml
-E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.OfficeChart.Base.xml
-E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.SfBarcode.Windows.xml
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.SfInput.WinForms.xml
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.Shared.Base.xml
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\System.Diagnostics.DiagnosticSource.xml
@@ -29,7 +23,11 @@ E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\obj\Debug\InterfusaoTimePoin
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\obj\Debug\InterfusaoTimePoint.exe
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\obj\Debug\InterfusaoTimePoint.pdb
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\obj\Debug\InterfusaoTimePoint.csproj.AssemblyReference.cache
-E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.Grid.Windows.xml
-E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.Shared.Windows.xml
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.xml
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\obj\Debug\InterfusaoTimePoint.exe.licenses
+E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml
+E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.DataSource.WinForms.xml
+E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.GridCommon.WinForms.xml
+E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.SfListView.WinForms.xml
