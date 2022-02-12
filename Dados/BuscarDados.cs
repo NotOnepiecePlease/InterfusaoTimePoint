@@ -127,11 +127,19 @@ namespace InterfusaoTimePoint.Dados
         #region Buscar arquivo especifico
         public void PreencherCaixaDeTexto(RichTextBox _caixaDeTexto, string _nomeDoArquivo)
         {
-            string[] linhasDoTexto = File.ReadAllLines(@"Horas\" + _nomeDoArquivo + "");
-
-            foreach (string linha in linhasDoTexto)
+            try
             {
-                _caixaDeTexto.Text += linha + "\n";
+                string[] linhasDoTexto = File.ReadAllLines(@"Horas\" + _nomeDoArquivo + "");
+
+                foreach (string linha in linhasDoTexto)
+                {
+                    _caixaDeTexto.Text += linha + "\n";
+                }
+            }
+            catch (Exception)
+            {
+
+               // throw;
             }
         }
 
@@ -140,19 +148,28 @@ namespace InterfusaoTimePoint.Dados
         #region Buscar descricao da atividade
         public void BuscarDescricaAtividade(SfComboBox _combobox, string _nomeDoArquivo)
         {
-            List<string> descricoesAtividades = new List<string>();
-            string[] linhasTexto = File.ReadAllLines(@"Horas\" + _nomeDoArquivo + "");
-            string[] textoSeparadoPorTabs = linhasTexto[0].Split('\t', '\n');
-
-
-            for (int i = 0; i < linhasTexto.Length; i++)
+            try
             {
-                textoSeparadoPorTabs = linhasTexto[i].Split('\t', '\n');
-                descricoesAtividades.Add(textoSeparadoPorTabs[2]);
-                // _combobox.
-            }
+                List<string> descricoesAtividades = new List<string>();
+                string[] linhasTexto = File.ReadAllLines(@"Horas\" + _nomeDoArquivo + "");
+                string[] textoSeparadoPorTabs = linhasTexto[0].Split('\t', '\n');
 
-            _combobox.DataSource = descricoesAtividades;
+
+                for (int i = 0; i < linhasTexto.Length; i++)
+                {
+                    textoSeparadoPorTabs = linhasTexto[i].Split('\t', '\n');
+                    descricoesAtividades.Add(textoSeparadoPorTabs[2]);
+                    // _combobox.
+                }
+
+                _combobox.DataSource = descricoesAtividades;
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+            
         }
         #endregion
     }

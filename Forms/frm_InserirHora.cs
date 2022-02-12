@@ -22,7 +22,9 @@ namespace InterfusaoTimePoint.Forms
             InitializeComponent();
             cmbContratos.SelectedIndex = 0;
             IdentificarNomeArquivoDiaAtual();
+            busDados.PreencherCaixaDeTexto(richtxtArquivoDeNotas, nomeDoArquivo);
             busDados.BuscarDescricaAtividade(cmbDescricao, nomeDoArquivo);
+            dateDataServico.Value = DateTime.Now;
         }
         public frm_InserirHora(string _nomeDoArquivo)
         {
@@ -32,12 +34,16 @@ namespace InterfusaoTimePoint.Forms
             lblArquivo.Text = _nomeDoArquivo;
             busDados.PreencherCaixaDeTexto(richtxtArquivoDeNotas, _nomeDoArquivo);
             busDados.BuscarDescricaAtividade(cmbDescricao, nomeDoArquivo);
+            dateDataServico.Value = DateTime.Now;
         }
 
         private void IdentificarNomeArquivoDiaAtual()
         {
             string dataHoje = DateTime.Now.ToShortDateString().Replace(@"/", "-");
             nomeDoArquivo = $"Dia - {dataHoje}.txt";
+
+            string caminhoArquivo = $"Horas\\{nomeDoArquivo}";
+
             lblArquivo.Text = nomeDoArquivo;
         }
 
@@ -48,23 +54,39 @@ namespace InterfusaoTimePoint.Forms
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            string horasUtilizadas = CalcularPorcentagemHoras(txtHorasUtilizadas.Text).Replace(",", ".");
-            insDados.InserirTextoNoArquivo(nomeDoArquivo, cmbContratos.SelectedItem.ToString(), txtSigla.Text, txtDescricaoAtividade.Text, horasUtilizadas, dateDataServico.Value.ToShortDateString());
+            string[] inicial_HORA_MINUTO = txtHoraInicial.Text.Split(':');
+            string[] final_HORA_MINUTO = txtHoraFinal.Text.Split(':');
+            DateTime hInicial = new DateTime(2022, 02, 11, Convert.ToInt32(inicial_HORA_MINUTO[0]), Convert.ToInt32(inicial_HORA_MINUTO[1]), 0);
+            DateTime hFinal = new DateTime(2022, 02, 11, Convert.ToInt32(final_HORA_MINUTO[0]), Convert.ToInt32(final_HORA_MINUTO[1]), 0);
+
+            TimeSpan subtracaoDasDatas_EmMinutos = hFinal.Subtract(hInicial);
+
+            // MessageBox.Show(subtracaoDasDatas_EmMinutos.ToString(@"hh\:mm"));
+            // MessageBox.Show($"h_Inicial = {hInicial.ToString("HH:mm")}\nh_Final = {hFinal.ToString("HH:mm")}\nTime Span = {resultado_subtracao_datas.TotalMinutes}");
+            //txtHoraInicial precisa receber valor no formato: 2h20m
+            //string horasUtilizadas = CalcularPorcentagemHoras(txtHoraInicial.Text).Replace(",", ".");
+            string horasUtilizadas = CalcularPorcentagemHoras(subtracaoDasDatas_EmMinutos.ToString(@"hh\:mm")).Replace(",", ".");
+            //Inserir horas normais, que vai ser copiada para o doc do lider
+            insDados.InserirTextoNoArquivoHoras(nomeDoArquivo, cmbContratos.SelectedItem.ToString(), txtSigla.Text, cmbDescricao.Text, horasUtilizadas, dateDataServico.Value.ToShortDateString());
+
+            //Inserir horas detalhadas, usada pra apontar no jira depois
+            insDados.InserirTextoArquivoHorasDETALHADAS(nomeDoArquivo, cmbContratos.SelectedItem.ToString(), txtSigla.Text, cmbDescricao.Text, txtHoraInicial.Text, txtHoraFinal.Text, horasUtilizadas, dateDataServico.Value.ToShortDateString());
+
+
             richtxtArquivoDeNotas.Text = "";
             busDados.PreencherCaixaDeTexto(richtxtArquivoDeNotas, nomeDoArquivo);
 
             busDados.BuscarDescricaAtividade(cmbDescricao, nomeDoArquivo);
         }
 
-        private string CalcularPorcentagemHoras(string _horasString)
+        private string CalcularPorcentagemHoras(string _minutosTotais)
         {
-            string[] tempoTotal = PegarNumerosDaString(_horasString);
+            string[] tempoTotal = PegarNumerosDaString(_minutosTotais);
             int horasEmMinutos = Convert.ToInt32(tempoTotal[0]) * 60; //tempoTotal[0] == Horas
-            horasEmMinutos += Convert.ToInt32(tempoTotal[1]);
+            horasEmMinutos += Convert.ToInt32(tempoTotal[1]); //Somo com os minutos do inicio da string
 
             //Calculo
-            float tempoGastoAtividade = ((horasEmMinutos * 100) / 60f)/100;
-
+            float tempoGastoAtividade = ((horasEmMinutos * 100) / 60f) / 100;
             return tempoGastoAtividade.ToString("F");
         }
 
@@ -93,9 +115,37 @@ namespace InterfusaoTimePoint.Forms
                 }
             }
 
-            string[] resultadoFinal = new string[2] {horas, minutos };
-            
+            string[] resultadoFinal = new string[2] { horas, minutos };
+
             return resultadoFinal;
+        }
+
+        private void frm_InserirHora_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+
+        private void txtHoraInicial_Leave(object sender, EventArgs e)
+        {
+            if (txtHoraInicial.TextLength == 4)
+            {
+                char[] arr = txtHoraInicial.Text.ToCharArray();
+
+                txtHoraInicial.Text = $"" + arr[0] + arr[1] + ":" + arr[2] + arr[3];
+            }
+        }
+
+        private void txtHoraFinal_Leave(object sender, EventArgs e)
+        {
+            if (txtHoraFinal.TextLength == 4)
+            {
+                char[] arr = txtHoraFinal.Text.ToCharArray();
+
+                txtHoraFinal.Text = $"" + arr[0] + arr[1] + ":" + arr[2] + arr[3];
+            }
         }
     }
 }

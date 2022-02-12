@@ -26,16 +26,21 @@ namespace InterfusaoTimePoint.Forms
 
         private void VerificarExistenciaPasta()
         {
-            string caminhoPasta = @"Horas";
-            if (!Directory.Exists(caminhoPasta))
+            string caminhoPastaPrincipal = @"Horas";
+            if (!Directory.Exists(caminhoPastaPrincipal))
             {
-                Directory.CreateDirectory(caminhoPasta);
+                Directory.CreateDirectory(caminhoPastaPrincipal);
+            }
+
+            string caminhoPastaHorasDetalhadas = @"Horas\\HorasDetalhadas";
+            if (!Directory.Exists(caminhoPastaHorasDetalhadas))
+            {
+                Directory.CreateDirectory(caminhoPastaHorasDetalhadas);
             }
         }
 
         private void PopularGridFake()
         {
-
             for (int i = 0; i < 15; i++)
             {
                 DataGridViewRow row = (DataGridViewRow)dataArquivosDasHoras.Rows[i].Clone();
@@ -45,9 +50,6 @@ namespace InterfusaoTimePoint.Forms
                 dataArquivosDasHoras.Rows.Add(row);
             }
         }
-
-        
-        
 
         private void btnSemanaAtual_Click(object sender, EventArgs e)
         {
@@ -61,7 +63,7 @@ namespace InterfusaoTimePoint.Forms
             //gridArquivosHoras.DataSource = null;
             Application.Exit();
         }
-
+        
         private void dataArquivosDasHoras_DoubleClick(object sender, EventArgs e)
         {
             frm_InserirHora formInserir = new frm_InserirHora(dataArquivosDasHoras.CurrentRow.Cells[0].Value.ToString());
@@ -74,7 +76,7 @@ namespace InterfusaoTimePoint.Forms
             //MessageBox.Show(calendarCalendario.SelectedDate.ToString());
             bd.PopularGridPorDatas(calendarCalendario.SelectedDate.Value, dataArquivosDasHoras);
         }
-
+        
         private void btnTodos_Click(object sender, EventArgs e)
         {
             bd.PopularGrid(dataArquivosDasHoras);

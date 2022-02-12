@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,10 @@ using System.Windows.Forms;
 
 namespace InterfusaoTimePoint.Dados
 {
+   // [DebuggerDisplay("MyProperty: {MyProperty}")]
     class AlterarDados
     {
-
+       // public int MyProperty { get; set; }
         public void AlterarTextoNoArquivo(string _contratos, string _sigla, string _descricaoAtividade, string _horasUtilizadas, string dataServico)
         {
             //Seto o nome do arquivo de texto e busco a data do dia atual.
