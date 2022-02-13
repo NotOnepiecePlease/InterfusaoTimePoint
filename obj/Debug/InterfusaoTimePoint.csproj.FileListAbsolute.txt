@@ -3,6 +3,7 @@ E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\InterfusaoTimePoin
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\InterfusaoTimePoint.pdb
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.xml
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.xml
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml
@@ -21,7 +22,6 @@ E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.SfInput
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.SfListView.WinForms.xml
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\Syncfusion.Shared.Base.xml
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\obj\Debug\InterfusaoTimePoint.csproj.AssemblyReference.cache
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\obj\Debug\InterfusaoTimePoint.Forms.frm_InserirHora.resources
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\obj\Debug\InterfusaoTimePoint.Forms.frm_Loading.resources
 E:\@C Sharp\InterfusaoTimePoint\InterfusaoTimePoint\obj\Debug\InterfusaoTimePoint.Forms.frm_Principal.resources

@@ -29,30 +29,29 @@ namespace InterfusaoTimePoint.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_InserirHora));
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.dateDataServico = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.panelBackground = new System.Windows.Forms.Panel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtHoraFinal = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.cmbDescricao = new Syncfusion.WinForms.ListView.SfComboBox();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.lblArquivo = new Bunifu.UI.WinForms.BunifuLabel();
@@ -66,6 +65,7 @@ namespace InterfusaoTimePoint.Forms
             this.richtxtArquivoDeNotas = new System.Windows.Forms.RichTextBox();
             this.formdockPanelHeader = new Bunifu.UI.WinForms.BunifuFormDock();
             this.formdockPanelBackground = new Bunifu.UI.WinForms.BunifuFormDock();
+            this.caixaDica = new System.Windows.Forms.ToolTip(this.components);
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDescricao)).BeginInit();
             this.panelHeader.SuspendLayout();
@@ -100,9 +100,7 @@ namespace InterfusaoTimePoint.Forms
             // panelBackground
             // 
             this.panelBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(12)))), ((int)(((byte)(9)))));
-            this.panelBackground.Controls.Add(this.bunifuLabel2);
             this.panelBackground.Controls.Add(this.txtHoraFinal);
-            this.panelBackground.Controls.Add(this.bunifuLabel1);
             this.panelBackground.Controls.Add(this.cmbDescricao);
             this.panelBackground.Controls.Add(this.panelHeader);
             this.panelBackground.Controls.Add(this.btnInserir);
@@ -116,21 +114,6 @@ namespace InterfusaoTimePoint.Forms
             this.panelBackground.Name = "panelBackground";
             this.panelBackground.Size = new System.Drawing.Size(1280, 468);
             this.panelBackground.TabIndex = 6;
-            // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.CursorType = null;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(42)))));
-            this.bunifuLabel2.Location = new System.Drawing.Point(646, 344);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(78, 23);
-            this.bunifuLabel2.TabIndex = 15;
-            this.bunifuLabel2.Text = "ex: 7h20m";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // txtHoraFinal
             // 
@@ -150,7 +133,7 @@ namespace InterfusaoTimePoint.Forms
             this.txtHoraFinal.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtHoraFinal.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtHoraFinal.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.txtHoraFinal.DefaultText = "04:20";
+            this.txtHoraFinal.DefaultText = "";
             this.txtHoraFinal.FillColor = System.Drawing.Color.White;
             this.txtHoraFinal.HideSelection = true;
             this.txtHoraFinal.IconLeft = null;
@@ -158,37 +141,36 @@ namespace InterfusaoTimePoint.Forms
             this.txtHoraFinal.IconPadding = 10;
             this.txtHoraFinal.IconRight = null;
             this.txtHoraFinal.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHoraFinal.Lines = new string[] {
-        "04:20"};
+            this.txtHoraFinal.Lines = new string[0];
             this.txtHoraFinal.Location = new System.Drawing.Point(646, 366);
             this.txtHoraFinal.MaxLength = 32767;
             this.txtHoraFinal.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtHoraFinal.Modified = false;
             this.txtHoraFinal.Multiline = false;
             this.txtHoraFinal.Name = "txtHoraFinal";
-            stateProperties17.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties17.FillColor = System.Drawing.Color.Empty;
-            stateProperties17.ForeColor = System.Drawing.Color.Empty;
-            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtHoraFinal.OnActiveState = stateProperties17;
-            stateProperties18.BorderColor = System.Drawing.Color.Empty;
-            stateProperties18.FillColor = System.Drawing.Color.White;
-            stateProperties18.ForeColor = System.Drawing.Color.Empty;
-            stateProperties18.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtHoraFinal.OnDisabledState = stateProperties18;
-            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties19.FillColor = System.Drawing.Color.Empty;
-            stateProperties19.ForeColor = System.Drawing.Color.Empty;
-            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtHoraFinal.OnHoverState = stateProperties19;
-            stateProperties20.BorderColor = System.Drawing.Color.Silver;
-            stateProperties20.FillColor = System.Drawing.Color.White;
-            stateProperties20.ForeColor = System.Drawing.Color.Empty;
-            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtHoraFinal.OnIdleState = stateProperties20;
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtHoraFinal.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.Empty;
+            stateProperties2.FillColor = System.Drawing.Color.White;
+            stateProperties2.ForeColor = System.Drawing.Color.Empty;
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtHoraFinal.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtHoraFinal.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtHoraFinal.OnIdleState = stateProperties4;
             this.txtHoraFinal.PasswordChar = '\0';
             this.txtHoraFinal.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtHoraFinal.PlaceholderText = "ex: 0500";
+            this.txtHoraFinal.PlaceholderText = "ex: 0700";
             this.txtHoraFinal.ReadOnly = false;
             this.txtHoraFinal.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtHoraFinal.SelectedText = "";
@@ -202,25 +184,10 @@ namespace InterfusaoTimePoint.Forms
             this.txtHoraFinal.TextMarginBottom = 0;
             this.txtHoraFinal.TextMarginLeft = 5;
             this.txtHoraFinal.TextMarginTop = 0;
-            this.txtHoraFinal.TextPlaceholder = "ex: 0500";
+            this.txtHoraFinal.TextPlaceholder = "ex: 0700";
             this.txtHoraFinal.UseSystemPasswordChar = false;
             this.txtHoraFinal.WordWrap = true;
             this.txtHoraFinal.Leave += new System.EventHandler(this.txtHoraFinal_Leave);
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(42)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(528, 344);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(78, 23);
-            this.bunifuLabel1.TabIndex = 11;
-            this.bunifuLabel1.Text = "ex: 5h20m";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // cmbDescricao
             // 
@@ -234,7 +201,6 @@ namespace InterfusaoTimePoint.Forms
             this.cmbDescricao.Style.TokenStyle.CloseButtonBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cmbDescricao.Style.TokenStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.cmbDescricao.TabIndex = 6;
-            this.cmbDescricao.Text = "AFA - Limpeza de codigo da source Vibra";
             this.cmbDescricao.ThemeName = "Office2016Black";
             // 
             // panelHeader
@@ -279,11 +245,11 @@ namespace InterfusaoTimePoint.Forms
             this.btnSair.ColorContrastOnClick = 45;
             this.btnSair.ColorContrastOnHover = 45;
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btnSair.CustomizableEdges = borderEdges4;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnSair.CustomizableEdges = borderEdges1;
             this.btnSair.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSair.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnSair.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -304,24 +270,24 @@ namespace InterfusaoTimePoint.Forms
             this.btnSair.IndicateFocus = false;
             this.btnSair.Location = new System.Drawing.Point(1235, 0);
             this.btnSair.Name = "btnSair";
-            stateProperties31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(42)))));
-            stateProperties31.BorderRadius = 3;
-            stateProperties31.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties31.BorderThickness = 1;
-            stateProperties31.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(42)))));
-            stateProperties31.ForeColor = System.Drawing.Color.White;
-            stateProperties31.IconLeftImage = null;
-            stateProperties31.IconRightImage = null;
-            this.btnSair.onHoverState = stateProperties31;
-            stateProperties32.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
-            stateProperties32.BorderRadius = 3;
-            stateProperties32.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties32.BorderThickness = 1;
-            stateProperties32.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
-            stateProperties32.ForeColor = System.Drawing.Color.White;
-            stateProperties32.IconLeftImage = null;
-            stateProperties32.IconRightImage = null;
-            this.btnSair.OnPressedState = stateProperties32;
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(42)))));
+            stateProperties5.BorderRadius = 3;
+            stateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties5.BorderThickness = 1;
+            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(42)))));
+            stateProperties5.ForeColor = System.Drawing.Color.White;
+            stateProperties5.IconLeftImage = null;
+            stateProperties5.IconRightImage = null;
+            this.btnSair.onHoverState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
+            stateProperties6.BorderRadius = 3;
+            stateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties6.BorderThickness = 1;
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
+            stateProperties6.ForeColor = System.Drawing.Color.White;
+            stateProperties6.IconLeftImage = null;
+            stateProperties6.IconRightImage = null;
+            this.btnSair.OnPressedState = stateProperties6;
             this.btnSair.Size = new System.Drawing.Size(45, 45);
             this.btnSair.TabIndex = 9;
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -369,11 +335,11 @@ namespace InterfusaoTimePoint.Forms
             this.btnInserir.ColorContrastOnClick = 45;
             this.btnInserir.ColorContrastOnHover = 45;
             this.btnInserir.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnInserir.CustomizableEdges = borderEdges3;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnInserir.CustomizableEdges = borderEdges2;
             this.btnInserir.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnInserir.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnInserir.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -394,28 +360,29 @@ namespace InterfusaoTimePoint.Forms
             this.btnInserir.IndicateFocus = false;
             this.btnInserir.Location = new System.Drawing.Point(887, 411);
             this.btnInserir.Name = "btnInserir";
-            stateProperties21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(42)))));
-            stateProperties21.BorderRadius = 10;
-            stateProperties21.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties21.BorderThickness = 10;
-            stateProperties21.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(42)))));
-            stateProperties21.ForeColor = System.Drawing.Color.White;
-            stateProperties21.IconLeftImage = null;
-            stateProperties21.IconRightImage = null;
-            this.btnInserir.onHoverState = stateProperties21;
-            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
-            stateProperties22.BorderRadius = 10;
-            stateProperties22.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties22.BorderThickness = 10;
-            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
-            stateProperties22.ForeColor = System.Drawing.Color.White;
-            stateProperties22.IconLeftImage = null;
-            stateProperties22.IconRightImage = null;
-            this.btnInserir.OnPressedState = stateProperties22;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(42)))));
+            stateProperties7.BorderRadius = 10;
+            stateProperties7.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties7.BorderThickness = 10;
+            stateProperties7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(42)))));
+            stateProperties7.ForeColor = System.Drawing.Color.White;
+            stateProperties7.IconLeftImage = null;
+            stateProperties7.IconRightImage = null;
+            this.btnInserir.onHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
+            stateProperties8.BorderRadius = 10;
+            stateProperties8.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties8.BorderThickness = 10;
+            stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
+            stateProperties8.ForeColor = System.Drawing.Color.White;
+            stateProperties8.IconLeftImage = null;
+            stateProperties8.IconRightImage = null;
+            this.btnInserir.OnPressedState = stateProperties8;
             this.btnInserir.Size = new System.Drawing.Size(94, 42);
             this.btnInserir.TabIndex = 7;
             this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnInserir.TextMarginLeft = 0;
+            this.caixaDica.SetToolTip(this.btnInserir, "aaaaaaaa");
             this.btnInserir.UseDefaultRadiusAndThickness = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
@@ -423,6 +390,7 @@ namespace InterfusaoTimePoint.Forms
             // 
             this.txtHoraInicial.AcceptsReturn = false;
             this.txtHoraInicial.AcceptsTab = false;
+            this.txtHoraInicial.AccessibleDescription = "";
             this.txtHoraInicial.AnimationSpeed = 200;
             this.txtHoraInicial.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtHoraInicial.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -437,7 +405,7 @@ namespace InterfusaoTimePoint.Forms
             this.txtHoraInicial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtHoraInicial.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtHoraInicial.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.txtHoraInicial.DefaultText = "02:30";
+            this.txtHoraInicial.DefaultText = "";
             this.txtHoraInicial.FillColor = System.Drawing.Color.White;
             this.txtHoraInicial.HideSelection = true;
             this.txtHoraInicial.IconLeft = null;
@@ -445,37 +413,36 @@ namespace InterfusaoTimePoint.Forms
             this.txtHoraInicial.IconPadding = 10;
             this.txtHoraInicial.IconRight = null;
             this.txtHoraInicial.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHoraInicial.Lines = new string[] {
-        "02:30"};
+            this.txtHoraInicial.Lines = new string[0];
             this.txtHoraInicial.Location = new System.Drawing.Point(528, 366);
             this.txtHoraInicial.MaxLength = 32767;
             this.txtHoraInicial.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtHoraInicial.Modified = false;
             this.txtHoraInicial.Multiline = false;
             this.txtHoraInicial.Name = "txtHoraInicial";
-            stateProperties23.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties23.FillColor = System.Drawing.Color.Empty;
-            stateProperties23.ForeColor = System.Drawing.Color.Empty;
-            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtHoraInicial.OnActiveState = stateProperties23;
-            stateProperties24.BorderColor = System.Drawing.Color.Empty;
-            stateProperties24.FillColor = System.Drawing.Color.White;
-            stateProperties24.ForeColor = System.Drawing.Color.Empty;
-            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtHoraInicial.OnDisabledState = stateProperties24;
-            stateProperties25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties25.FillColor = System.Drawing.Color.Empty;
-            stateProperties25.ForeColor = System.Drawing.Color.Empty;
-            stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtHoraInicial.OnHoverState = stateProperties25;
-            stateProperties26.BorderColor = System.Drawing.Color.Silver;
-            stateProperties26.FillColor = System.Drawing.Color.White;
-            stateProperties26.ForeColor = System.Drawing.Color.Empty;
-            stateProperties26.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtHoraInicial.OnIdleState = stateProperties26;
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtHoraInicial.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.Empty;
+            stateProperties10.FillColor = System.Drawing.Color.White;
+            stateProperties10.ForeColor = System.Drawing.Color.Empty;
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtHoraInicial.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtHoraInicial.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Silver;
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtHoraInicial.OnIdleState = stateProperties12;
             this.txtHoraInicial.PasswordChar = '\0';
             this.txtHoraInicial.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtHoraInicial.PlaceholderText = "ex: 0700";
+            this.txtHoraInicial.PlaceholderText = "ex: 0500";
             this.txtHoraInicial.ReadOnly = false;
             this.txtHoraInicial.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtHoraInicial.SelectedText = "";
@@ -489,7 +456,8 @@ namespace InterfusaoTimePoint.Forms
             this.txtHoraInicial.TextMarginBottom = 0;
             this.txtHoraInicial.TextMarginLeft = 5;
             this.txtHoraInicial.TextMarginTop = 0;
-            this.txtHoraInicial.TextPlaceholder = "ex: 0700";
+            this.txtHoraInicial.TextPlaceholder = "ex: 0500";
+            this.caixaDica.SetToolTip(this.txtHoraInicial, "Testando");
             this.txtHoraInicial.UseSystemPasswordChar = false;
             this.txtHoraInicial.WordWrap = true;
             this.txtHoraInicial.Leave += new System.EventHandler(this.txtHoraInicial_Leave);
@@ -528,26 +496,26 @@ namespace InterfusaoTimePoint.Forms
             this.txtSigla.Modified = false;
             this.txtSigla.Multiline = false;
             this.txtSigla.Name = "txtSigla";
-            stateProperties27.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties27.FillColor = System.Drawing.Color.Empty;
-            stateProperties27.ForeColor = System.Drawing.Color.Empty;
-            stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSigla.OnActiveState = stateProperties27;
-            stateProperties28.BorderColor = System.Drawing.Color.Empty;
-            stateProperties28.FillColor = System.Drawing.Color.White;
-            stateProperties28.ForeColor = System.Drawing.Color.Empty;
-            stateProperties28.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtSigla.OnDisabledState = stateProperties28;
-            stateProperties29.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties29.FillColor = System.Drawing.Color.Empty;
-            stateProperties29.ForeColor = System.Drawing.Color.Empty;
-            stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSigla.OnHoverState = stateProperties29;
-            stateProperties30.BorderColor = System.Drawing.Color.Silver;
-            stateProperties30.FillColor = System.Drawing.Color.White;
-            stateProperties30.ForeColor = System.Drawing.Color.Empty;
-            stateProperties30.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSigla.OnIdleState = stateProperties30;
+            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties13.FillColor = System.Drawing.Color.Empty;
+            stateProperties13.ForeColor = System.Drawing.Color.Empty;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSigla.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.Empty;
+            stateProperties14.FillColor = System.Drawing.Color.White;
+            stateProperties14.ForeColor = System.Drawing.Color.Empty;
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtSigla.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties15.FillColor = System.Drawing.Color.Empty;
+            stateProperties15.ForeColor = System.Drawing.Color.Empty;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSigla.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.Silver;
+            stateProperties16.FillColor = System.Drawing.Color.White;
+            stateProperties16.ForeColor = System.Drawing.Color.Empty;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSigla.OnIdleState = stateProperties16;
             this.txtSigla.PasswordChar = '\0';
             this.txtSigla.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtSigla.PlaceholderText = "Enter text";
@@ -690,6 +658,16 @@ namespace InterfusaoTimePoint.Forms
             this.formdockPanelBackground.TitleBarOptions.TitleBarControl = this.panelBackground;
             this.formdockPanelBackground.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
+            // caixaDica
+            // 
+            this.caixaDica.AutoPopDelay = 5000;
+            this.caixaDica.InitialDelay = 20;
+            this.caixaDica.IsBalloon = true;
+            this.caixaDica.ReshowDelay = 100;
+            this.caixaDica.ShowAlways = true;
+            this.caixaDica.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.caixaDica.ToolTipTitle = "Dica:";
+            // 
             // frm_InserirHora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -697,13 +675,13 @@ namespace InterfusaoTimePoint.Forms
             this.ClientSize = new System.Drawing.Size(1280, 468);
             this.Controls.Add(this.panelBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frm_InserirHora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_InserirHora";
+            this.Text = "Inserir Tarefa";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_InserirHora_KeyDown);
             this.panelBackground.ResumeLayout(false);
-            this.panelBackground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDescricao)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
@@ -728,8 +706,7 @@ namespace InterfusaoTimePoint.Forms
         private Bunifu.UI.WinForms.BunifuFormDock formdockPanelBackground;
         private Bunifu.UI.WinForms.BunifuLabel lblArquivo;
         private Syncfusion.WinForms.ListView.SfComboBox cmbDescricao;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtHoraFinal;
+        private System.Windows.Forms.ToolTip caixaDica;
     }
 }

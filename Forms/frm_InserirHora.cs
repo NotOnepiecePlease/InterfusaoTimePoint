@@ -28,7 +28,15 @@ namespace InterfusaoTimePoint.Forms
             cmbDescricao.AutoCompleteSuggestMode = AutoCompleteSuggestMode.Contains;
             cmbDescricao.DropDownListView.ItemHeight = 40;
             busDados.BuscarContratos(cmbContratos);
+            busDados.BuscarSiglas(txtSigla);
             SelecionarIndiceComboboxContratos();
+            caixaDica.SetToolTip(btnInserir, "Clique para inserir a nova tarefa");
+            caixaDica.SetToolTip(txtHoraInicial, "Exemplo: se iniciou as 10:25 basta digitar 1025");
+            caixaDica.SetToolTip(txtHoraFinal, "Exemplo: se terminou as 12:30 basta digitar 1230");
+            caixaDica.SetToolTip(txtSigla, "Escreva a sua sigla ou cadastre na tela anterior");
+            caixaDica.SetToolTip(dateDataServico, "Escolha a data da tarefa");
+            caixaDica.SetToolTip(cmbContratos, "Escolha qual o contrato da tarefa");
+            caixaDica.SetToolTip(cmbDescricao, "Digite o nome da tarefa ou caso seja repetida basta escolher uma existente");
         }
         public frm_InserirHora(string _nomeDoArquivo)
         {
@@ -41,7 +49,15 @@ namespace InterfusaoTimePoint.Forms
             cmbDescricao.AutoCompleteSuggestMode = AutoCompleteSuggestMode.Contains;
             cmbDescricao.DropDownListView.ItemHeight = 40;
             busDados.BuscarContratos(cmbContratos);
+            busDados.BuscarSiglas(txtSigla);
             SelecionarIndiceComboboxContratos();
+            caixaDica.SetToolTip(btnInserir, "Clique para inserir a nova tarefa");
+            caixaDica.SetToolTip(txtHoraInicial, "Exemplo: se iniciou as 10:25 basta digitar 1025");
+            caixaDica.SetToolTip(txtHoraFinal, "Exemplo: se terminou as 12:30 basta digitar 1230");
+            caixaDica.SetToolTip(txtSigla, "Escreva a sua sigla ou cadastre na tela anterior");
+            caixaDica.SetToolTip(dateDataServico, "Escolha a data da tarefa");
+            caixaDica.SetToolTip(cmbContratos, "Escolha qual o contrato da tarefa");
+            caixaDica.SetToolTip(cmbDescricao, "Digite o nome da tarefa ou caso seja repetida basta escolher uma existente");
         }
 
         private void SelecionarIndiceComboboxContratos()

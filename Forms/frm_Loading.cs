@@ -16,19 +16,26 @@ namespace InterfusaoTimePoint.Forms
         public frm_Loading()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb( 9, 12, 9 );
+            //this.BackColor = Color.White;
+            this.TransparencyKey = BackColor;
+            progressbar.Value = 0;
+            timer1.Start();
         }
 
-        private void timerLoading_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            progressLoading.Value += 20;
-            Thread.Sleep(1000);
-
-            if(progressLoading.Value == 100)
+            if(progressbar.Value < 99)
             {
+                progressbar.Value += 50;
+                Thread.Sleep(200);
+            }
+            else
+            {
+                timer1.Stop();
                 frm_Principal formPrincipal = new frm_Principal();
                 formPrincipal.Show();
                 this.Hide();
-                timerLoading.Stop();
             }
         }
     }

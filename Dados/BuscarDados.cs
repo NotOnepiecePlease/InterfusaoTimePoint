@@ -1,4 +1,5 @@
 ﻿using Bunifu.UI.WinForms;
+using Bunifu.UI.WinForms.BunifuTextbox;
 using Syncfusion.WinForms.ListView;
 using System;
 using System.Collections.Generic;
@@ -183,7 +184,7 @@ namespace InterfusaoTimePoint.Dados
             catch (Exception)
             {
 
-               // throw;
+                // throw;
             }
         }
 
@@ -213,7 +214,7 @@ namespace InterfusaoTimePoint.Dados
 
                 //throw;
             }
-            
+
         }
         #endregion
 
@@ -232,6 +233,22 @@ namespace InterfusaoTimePoint.Dados
             catch (Exception)
             {
 
+                // throw;
+            }
+        }
+
+        #endregion
+
+        #region Buscar siglas
+        public void BuscarSiglas(BunifuTextBox _textBox)
+        {
+            try
+            {
+                string[] linhasDoTexto = File.ReadAllLines(@"Contratos_e_sigla\Sigla.txt");
+                _textBox.Text = linhasDoTexto[0];
+            }
+            catch (Exception)
+            {
                 // throw;
             }
         }

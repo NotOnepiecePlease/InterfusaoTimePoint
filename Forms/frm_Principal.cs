@@ -51,18 +51,6 @@ namespace InterfusaoTimePoint.Forms
             }
         }
 
-        private void PopularGridFake()
-        {
-            for (int i = 0; i < 15; i++)
-            {
-                DataGridViewRow row = (DataGridViewRow)dataArquivosDasHoras.Rows[i].Clone();
-                row.Cells[0].Value = $"Arquivo_Texto{i}.txt";
-                row.Cells[1].Value = (i < 10) ? $"0{i}/02/2022" : $"{i}/02/2022";
-                row.Cells[2].Value = "06/02/2022";
-                dataArquivosDasHoras.Rows.Add(row);
-            }
-        }
-
         private void btnSemanaAtual_Click(object sender, EventArgs e)
         {
             frm_InserirHora formInserirHora = new frm_InserirHora();
@@ -104,8 +92,14 @@ namespace InterfusaoTimePoint.Forms
 
         private void btnArquivosDaSemana_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(GetIso8601WeekOfYear(new DateTime(2022, 01, 13)).ToString());
-            bd.PopularGridPorArquivosDaSemana(calendarCalendario.SelectedDate.Value, dataArquivosDasHoras);
+            try
+            {
+                bd.PopularGridPorArquivosDaSemana(calendarCalendario.SelectedDate.Value, dataArquivosDasHoras);
+            }
+            catch (Exception)
+            {
+                //   throw;
+            }
             //calendarCalendario.SelectedDate = DateTime.Now;
             calendarCalendario.Refresh();
         }
@@ -119,7 +113,7 @@ namespace InterfusaoTimePoint.Forms
         private void btnEditarContratos_Click(object sender, EventArgs e)
         {
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-            startInfo.FileName = @""+caminhoContratos+"\\Contratos.txt";
+            startInfo.FileName = @"" + caminhoContratos + "\\Contratos.txt";
 
             if (File.Exists(startInfo.FileName) == false)
             {
@@ -141,7 +135,7 @@ namespace InterfusaoTimePoint.Forms
 
             if (File.Exists(startInfo.FileName) == false)
             {
-                File.AppendAllText(startInfo.FileName, "AFA");
+                File.AppendAllText(startInfo.FileName, "XXX");
                 System.Diagnostics.Process.Start(startInfo);
             }
             else
