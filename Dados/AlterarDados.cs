@@ -9,22 +9,64 @@ using System.Windows.Forms;
 
 namespace InterfusaoTimePoint.Dados
 {
-   // [DebuggerDisplay("MyProperty: {MyProperty}")]
+    // [DebuggerDisplay("MyProperty: {MyProperty}")]
     class AlterarDados
     {
-       // public int MyProperty { get; set; }
-        public void AlterarTextoNoArquivo(string _contratos, string _sigla, string _descricaoAtividade, string _horasUtilizadas, string dataServico)
+        // public int MyProperty { get; set; }
+
+        #region Alterar dado ja existente
+        public void AlterarTextoNoArquivo(string _nomeArquivo, string _descricaoTarefa, float _horasUtilizadas, string _dataServico)
         {
-            //Seto o nome do arquivo de texto e busco a data do dia atual.
-            string dataHoje = DateTime.Now.ToShortDateString().Replace(@"/", "-");
-            string caminhoArquivo = $"Horas\\Dia - {dataHoje}.txt";
+            try
+            {
+                string[] linhasDoTexto = File.ReadAllLines(@"Horas\" + _nomeArquivo + "");
+                string[] linhasDoTextoATUALIZADA = new string[linhasDoTexto.Length];
+                int contadorLinhas = 0;
+                foreach (string linha in linhasDoTexto)
+                {
+                    //0 - Contrato
+                    //1 - Sigla
+                    //2 - Descricao
+                    //3 - Horas utilizadas
+                    //4 - Data
+                    //5 - NAO CRIADA
+                    string[] linhaQuebradaPorTab = linha.Split('\t');
+                    //_caixaDeTexto.Text += linha + "\n";
+                    if (_descricaoTarefa.Equals(linhaQuebradaPorTab[2]))
+                    {
+                        float valorJaExistenteNoArquivo = float.Parse(linhaQuebradaPorTab[3]);
+                        float valor1 = 0.0f;
 
-            //Escreve no arquivo de texto
-            File.AppendAllText(caminhoArquivo, $"{_contratos}\t{_sigla}\t{_descricaoAtividade}\t{_horasUtilizadas}\t{dataServico}\tNÃO CRIADA"); // Editar a primeira linha
-            File.AppendAllText(caminhoArquivo, "\n");
+                        if(valorJaExistenteNoArquivo >= 10.0f && linhaQuebradaPorTab[3].Length < 5)
+                        {
+                            valor1 = float.Parse(linhaQuebradaPorTab[3] + "0");
+                        }
+                        else
+                        {
+                            valor1 = float.Parse(linhaQuebradaPorTab[3]);
+                        }
 
-            //Copia o texto para o Ctrl+C
-            Clipboard.SetText(File.ReadAllText(caminhoArquivo));
+                        float valor2 = _horasUtilizadas;
+                        float somaHoras = valor1 + valor2;
+                        linhaQuebradaPorTab[3] = (somaHoras).ToString("F");//.Replace(",", ".");
+                        linhaQuebradaPorTab[4] = _dataServico;
+
+                        //return true;
+                    }
+                    string linhaAtualizada = linhaQuebradaPorTab.ToString();
+                    linhaAtualizada = string.Join("\t", linhaQuebradaPorTab);
+                    linhasDoTextoATUALIZADA[contadorLinhas] = linhaAtualizada;
+                    contadorLinhas++;
+                }
+                File.WriteAllLines(@"Horas\" + _nomeArquivo + "", linhasDoTextoATUALIZADA);
+                //return false;
+            }
+            catch (Exception)
+            {
+                // throw;
+                //return false;
+            }
         }
+        #endregion
     }
 }

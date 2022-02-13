@@ -101,10 +101,54 @@ namespace InterfusaoTimePoint.Dados
                 FileInfo[] Files = dinfo.GetFiles("*.txt");
                 foreach (FileInfo file in Files)
                 {
+                    //Filtragem por numero da semana
+                    //if (PegarNumeroDaSemana(file.CreationTime).Equals(PegarNumeroDaSemana(_data)))
+                    //    listaDeArquivos.Add(new colunasDaLista(file.Name, file.CreationTime.ToString(), file.LastWriteTime.ToString()));
+
+                    //Filtragem pelo dia
+                    if (file.CreationTime.ToShortDateString().Equals(_data.ToShortDateString()))
+                        listaDeArquivos.Add(new colunasDaLista(file.Name, file.CreationTime.ToString(), file.LastWriteTime.ToString()));
+                }
+
+                foreach (var arquivo in listaDeArquivos)
+                {
+                    dt.Rows.Add(arquivo.nome, arquivo.data_criacao, arquivo.data_modificacao);
+                }
+
+                bindingSource1.DataSource = dt;
+                _dataArquivosDasHoras.DataSource = bindingSource1;
+                _dataArquivosDasHoras.Sort(_dataArquivosDasHoras.Columns["Nome"], ListSortDirection.Ascending);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        #endregion
+
+        #region popular grid por semana
+        public void PopularGridPorArquivosDaSemana(DateTime _data, BunifuDataGridView _dataArquivosDasHoras)
+        {
+            try
+            {
+                BindingSource bindingSource1 = new BindingSource();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Nome");
+                dt.Columns.Add("Data de Criação");
+                dt.Columns.Add("Data de Modificação");
+
+
+                BindingList<colunasDaLista> listaDeArquivos = new BindingList<colunasDaLista>();
+                DirectoryInfo dinfo = new DirectoryInfo(@"Horas");
+                FileInfo[] Files = dinfo.GetFiles("*.txt");
+                foreach (FileInfo file in Files)
+                {
+                    //Filtragem por numero da semana
                     if (PegarNumeroDaSemana(file.CreationTime).Equals(PegarNumeroDaSemana(_data)))
                         listaDeArquivos.Add(new colunasDaLista(file.Name, file.CreationTime.ToString(), file.LastWriteTime.ToString()));
 
-                    //if (file.CreationTime.ToShortDateString().Equals(_data))
+                    //Filtragem pelo dia
+                    //if (file.CreationTime.ToShortDateString().Equals(_data.ToShortDateString()))
                     //    listaDeArquivos.Add(new colunasDaLista(file.Name, file.CreationTime.ToString(), file.LastWriteTime.ToString()));
                 }
 
@@ -171,6 +215,27 @@ namespace InterfusaoTimePoint.Dados
             }
             
         }
+        #endregion
+
+        #region Buscar contratos
+        public void BuscarContratos(BunifuDropdown _comboboxContratos)
+        {
+            try
+            {
+                string[] linhasDoTexto = File.ReadAllLines(@"Contratos_e_sigla\Contratos.txt");
+
+                foreach (string linha in linhasDoTexto)
+                {
+                    _comboboxContratos.Items.Add(linha);
+                }
+            }
+            catch (Exception)
+            {
+
+                // throw;
+            }
+        }
+
         #endregion
     }
 }

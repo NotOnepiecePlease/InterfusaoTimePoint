@@ -1,4 +1,5 @@
 ﻿using InterfusaoTimePoint.Dados;
+using Syncfusion.WinForms.ListView.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,21 +21,39 @@ namespace InterfusaoTimePoint.Forms
         public frm_InserirHora()
         {
             InitializeComponent();
-            cmbContratos.SelectedIndex = 0;
             IdentificarNomeArquivoDiaAtual();
             busDados.PreencherCaixaDeTexto(richtxtArquivoDeNotas, nomeDoArquivo);
             busDados.BuscarDescricaAtividade(cmbDescricao, nomeDoArquivo);
             dateDataServico.Value = DateTime.Now;
+            cmbDescricao.AutoCompleteSuggestMode = AutoCompleteSuggestMode.Contains;
+            cmbDescricao.DropDownListView.ItemHeight = 40;
+            busDados.BuscarContratos(cmbContratos);
+            SelecionarIndiceComboboxContratos();
         }
         public frm_InserirHora(string _nomeDoArquivo)
         {
             InitializeComponent();
             nomeDoArquivo = _nomeDoArquivo;
-            cmbContratos.SelectedIndex = 0;
             lblArquivo.Text = _nomeDoArquivo;
             busDados.PreencherCaixaDeTexto(richtxtArquivoDeNotas, _nomeDoArquivo);
             busDados.BuscarDescricaAtividade(cmbDescricao, nomeDoArquivo);
             dateDataServico.Value = DateTime.Now;
+            cmbDescricao.AutoCompleteSuggestMode = AutoCompleteSuggestMode.Contains;
+            cmbDescricao.DropDownListView.ItemHeight = 40;
+            busDados.BuscarContratos(cmbContratos);
+            SelecionarIndiceComboboxContratos();
+        }
+
+        private void SelecionarIndiceComboboxContratos()
+        {
+            try
+            {
+                cmbContratos.SelectedIndex = 0;
+            }
+            catch (Exception)
+            {
+                //throw;
+            }
         }
 
         private void IdentificarNomeArquivoDiaAtual()
@@ -65,7 +84,7 @@ namespace InterfusaoTimePoint.Forms
             // MessageBox.Show($"h_Inicial = {hInicial.ToString("HH:mm")}\nh_Final = {hFinal.ToString("HH:mm")}\nTime Span = {resultado_subtracao_datas.TotalMinutes}");
             //txtHoraInicial precisa receber valor no formato: 2h20m
             //string horasUtilizadas = CalcularPorcentagemHoras(txtHoraInicial.Text).Replace(",", ".");
-            string horasUtilizadas = CalcularPorcentagemHoras(subtracaoDasDatas_EmMinutos.ToString(@"hh\:mm")).Replace(",", ".");
+            float horasUtilizadas = CalcularPorcentagemHoras(subtracaoDasDatas_EmMinutos.ToString(@"hh\:mm"));//.Replace(",", ".");
             //Inserir horas normais, que vai ser copiada para o doc do lider
             insDados.InserirTextoNoArquivoHoras(nomeDoArquivo, cmbContratos.SelectedItem.ToString(), txtSigla.Text, cmbDescricao.Text, horasUtilizadas, dateDataServico.Value.ToShortDateString());
 
@@ -79,7 +98,7 @@ namespace InterfusaoTimePoint.Forms
             busDados.BuscarDescricaAtividade(cmbDescricao, nomeDoArquivo);
         }
 
-        private string CalcularPorcentagemHoras(string _minutosTotais)
+        private float CalcularPorcentagemHoras(string _minutosTotais)
         {
             string[] tempoTotal = PegarNumerosDaString(_minutosTotais);
             int horasEmMinutos = Convert.ToInt32(tempoTotal[0]) * 60; //tempoTotal[0] == Horas
@@ -87,7 +106,8 @@ namespace InterfusaoTimePoint.Forms
 
             //Calculo
             float tempoGastoAtividade = ((horasEmMinutos * 100) / 60f) / 100;
-            return tempoGastoAtividade.ToString("F");
+            float resultado = float.Parse(tempoGastoAtividade.ToString("F"));
+            return resultado;
         }
 
         private string[] PegarNumerosDaString(string _horasString)
